@@ -8,6 +8,7 @@ import { userQuery } from '../utils/data';
 import { client } from '../client';
 import logo from '../assets/logo.png';
 import { Link, Route, Routes } from 'react-router-dom';
+import { fetchUser } from '../utils/fetchUser';
 
 
 function Home() {
@@ -15,7 +16,9 @@ function Home() {
     const [user, setUser] = useState(null);
     const scrollRef = useRef(null);
 
-    const userInfo = localStorage.getItem("user") !== "undefined" ? JSON.parse(localStorage.getItem("user")) : localStorage.clear();
+    const userInfo = fetchUser();
+
+    // const userInfo = localStorage.getItem("user") !== "undefined" ? JSON.parse(localStorage.getItem("user")) : localStorage.clear();
 
     useEffect(() => {
         const query = userQuery(userInfo?.googleId);
