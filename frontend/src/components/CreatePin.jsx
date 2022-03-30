@@ -1,6 +1,10 @@
 import React from 'react';
+import { AiOutlineCloudUpload } from 'react-icons/ai';
+import { MdDelete } from 'react-icons/md';
 
-function CreatePin() {
+import Spinner from './Sidebar';
+
+function CreatePin({ user }) {
     return (
         <div>CreatePin</div>
     )
