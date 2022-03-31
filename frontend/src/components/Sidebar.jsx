@@ -13,6 +13,7 @@ const categories = [
     { name: "Tech" },
     { name: "Parenthood" },
     { name: "Poetry" },
+    { name: "Cuisine" },
     { name: "Gadgets" }
 ];
 
