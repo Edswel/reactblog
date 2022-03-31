@@ -32,6 +32,8 @@ function Feed() {
 
     if (loading) return <Spinner message="More idea coming up..." />
 
+    if (!pins?.length) return <h2>No Related Post Available!</h2>
+
     return (
         <div>
             {pins && <MasonryLayout pins={pins} />}
